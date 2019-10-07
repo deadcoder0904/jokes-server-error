@@ -1,0 +1,109 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "stepType": "CreateModel",
+      "name": "Joke",
+      "embedded": false
+    },
+    {
+      "stepType": "CreateModel",
+      "name": "Author",
+      "embedded": false
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Joke",
+      "name": "id",
+      "type": {
+        "Base": "String"
+      },
+      "arity": "required",
+      "isUnique": false,
+      "id": {
+        "strategy": "Auto",
+        "sequence": null
+      },
+      "default": {
+        "Expression": [
+          "cuid",
+          "String",
+          []
+        ]
+      }
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Joke",
+      "name": "author",
+      "type": {
+        "Relation": {
+          "to": "Author",
+          "to_fields": [
+            "id"
+          ],
+          "name": "AuthorToJoke",
+          "on_delete": "None"
+        }
+      },
+      "arity": "required",
+      "isUnique": false
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Joke",
+      "name": "content",
+      "type": {
+        "Base": "String"
+      },
+      "arity": "required",
+      "isUnique": true
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Author",
+      "name": "id",
+      "type": {
+        "Base": "String"
+      },
+      "arity": "required",
+      "isUnique": false,
+      "id": {
+        "strategy": "Auto",
+        "sequence": null
+      },
+      "default": {
+        "Expression": [
+          "cuid",
+          "String",
+          []
+        ]
+      }
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Author",
+      "name": "name",
+      "type": {
+        "Base": "String"
+      },
+      "arity": "required",
+      "isUnique": false
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Author",
+      "name": "jokes",
+      "type": {
+        "Relation": {
+          "to": "Joke",
+          "to_fields": [],
+          "name": "AuthorToJoke",
+          "on_delete": "None"
+        }
+      },
+      "arity": "list",
+      "isUnique": false
+    }
+  ]
+}

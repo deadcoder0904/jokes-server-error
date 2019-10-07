@@ -1,0 +1,22 @@
+{
+  "name": "node-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "nexus": "0.12.0-beta.9"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "seed": "node prisma/seed.js",
+    "dev": "prisma2 dev",
+    "liftsave": "prisma2 lift save",
+    "liftup": "prisma2 lift up",
+    "postinstall": "prisma2 generate"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3",
+    "prisma2": "2.0.0-preview-13.2"
+  }
+}
