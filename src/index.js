@@ -33,7 +33,7 @@ const Query = objectType({
   definition(t) {
     t.crud.jokes()
     t.list.field('filterJokesByAuthor', {
-      type: 'Joke',
+      type: 'Author',
       args: {
         name: stringArg(),
       },
@@ -41,9 +41,6 @@ const Query = objectType({
         const jokesByAuthor = await ctx.photon.authors.findMany({
           where: {
             name,
-          },
-          select: {
-            jokes: true,
           },
         })
         // const jokesByAuthor = await ctx.photon.jokes.findMany({
@@ -53,7 +50,7 @@ const Query = objectType({
         //     },
         //   },
         // })
-        console.log(JSON.stringify(jokesByAuthor))
+        console.log(JSON.stringify(jokesByAuthor, null, 2))
         return jokesByAuthor
       },
     })

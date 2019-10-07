@@ -45,6 +45,6 @@ type Mutation {
 }
 
 type Query {
-  filterJokesByAuthor(name: String): [Joke!]!
+  filterJokesByAuthor(name: String): [Author!]!
   jokes(after: String, before: String, first: Int, last: Int, skip: Int): [Joke!]
 }
