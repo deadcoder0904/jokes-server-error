@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "graphql-yoga": "^1.18.3",
-    "nexus": "0.12.0-beta.9"
+    "nexus": "^0.12.0-beta.12"
   },
   "scripts": {
     "start": "nodemon src/index.js",
