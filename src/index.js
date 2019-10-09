@@ -42,6 +42,9 @@ const Query = objectType({
           where: {
             name,
           },
+          include: {
+            jokes: true,
+          },
         })
         // const jokesByAuthor = await ctx.photon.jokes.findMany({
         //   where: {
