@@ -2327,23 +2327,16 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-nexus-prisma@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/nexus-prisma/-/nexus-prisma-0.5.0.tgz#929919fa1bba5e643ed540acaa25c4f71ebde41d"
-  integrity sha512-E9SFzxTpjmTJ4CmNwVLgM0idAzQ7fYczKLSz480WzF4W1EJolueYT040eeKVm3Z3Yg7IQaX0d+O6dpl7NwDtFg==
+nexus-prisma@^0.5.0-next.7:
+  version "0.5.0-next.7"
+  resolved "https://registry.yarnpkg.com/nexus-prisma/-/nexus-prisma-0.5.0-next.7.tgz#edae99d54a0d50a79630b332b8019ddba55be7f1"
+  integrity sha512-XjFYE/LhzdiSM6xnNH1zv/rqehoNqWrz5c40BIzwWJv/k6Rj/DSc/WhH2XpvBHTBNEuTQGOOX4WrgvVDC/i/JA==
   dependencies:
     "@prisma/photon" "^0.2.94"
     camelcase "^5.3.1"
     fs-extra "^8.1.0"
     nexus "^0.12.0-beta.14"
     pluralize "^8.0.0"
-
-nexus@^0.12.0-beta.12:
-  version "0.12.0-beta.12"
-  resolved "https://registry.yarnpkg.com/nexus/-/nexus-0.12.0-beta.12.tgz#086f5ec0336fdca8e73630bc672323086fddadfb"
-  integrity sha512-bXe0UYhwwZjAxKRhbK8ZgyiCf3Lr3qUJIlJC6D8uZnSfmL3P4MOVS4FZj3hFx80VbA1MTJOHCRfEQxAj53othA==
-  dependencies:
-    tslib "^1.9.3"
 
 nexus@^0.12.0-beta.14:
   version "0.12.0-beta.14"
@@ -2717,10 +2710,10 @@ prisma-datamodel@^1.36.0-test.2:
     pluralize "^7.0.0"
     popsicle "10"
 
-prisma2@2.0.0-preview014.2:
-  version "2.0.0-preview014.2"
-  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview014.2.tgz#1a9437a91663b9abc9d13212ca76ff33b18743ef"
-  integrity sha512-/AyU6C2xnAYHuJMVYRBFwXp2BJ7UGXet5C7YcN1sU9p0Rv8VXAauSS+SMjyP0RmYEjJPtiU8FqbYWyx4xLTsLg==
+prisma2@^2.0.0-alpha.251:
+  version "2.0.0-alpha.251"
+  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-alpha.251.tgz#e7275667afecba5ade200c401052d69afa139f53"
+  integrity sha512-Tb2fjwsEPbiY+elgSWOM8WmUj4Fqu19BuVbCQoDp2XxvER/jPRXled8FhdnIHlvYyjdx+0npxzlei9HVDtw6DQ==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"

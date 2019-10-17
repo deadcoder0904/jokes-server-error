@@ -1,6 +1,12 @@
 const { GraphQLServer } = require('graphql-yoga')
 const { join } = require('path')
-const { makeSchema, objectType, idArg, stringArg } = require('nexus')
+const {
+  makeSchema,
+  objectType,
+  stringArg,
+  queryType,
+  mutationType,
+} = require('nexus')
 const { Photon } = require('@generated/photon')
 const { nexusPrismaPlugin } = require('nexus-prisma')
 
@@ -28,8 +34,7 @@ const Author = objectType({
   },
 })
 
-const Query = objectType({
-  name: 'Query',
+const Query = queryType({
   definition(t) {
     t.crud.jokes()
     t.list.field('filterJokesByAuthor', {
@@ -60,8 +65,7 @@ const Query = objectType({
   },
 })
 
-const Mutation = objectType({
-  name: 'Mutation',
+const Mutation = mutationType({
   definition(t) {
     t.crud.createOneJoke({ alias: 'createJoke' })
     t.crud.deleteOneJoke({ alias: 'deleteJoke' })
@@ -69,7 +73,8 @@ const Mutation = objectType({
 })
 
 const schema = makeSchema({
-  types: [Query, Mutation, Joke, Author, nexusPrisma],
+  plugins: [nexusPrisma],
+  types: [Query, Mutation, Joke, Author],
   outputs: {
     schema: join(__dirname, '/schema.graphql'),
   },
