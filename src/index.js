@@ -12,9 +12,7 @@ const { nexusPrismaPlugin } = require('nexus-prisma')
 
 const photon = new Photon()
 
-const nexusPrisma = nexusPrismaPlugin({
-  photon: ctx => ctx.photon,
-})
+const nexusPrisma = nexusPrismaPlugin()
 
 const Joke = objectType({
   name: 'Joke',
