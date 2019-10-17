@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "graphql-yoga": "^1.18.3",
-    "nexus": "^0.12.0-beta.12"
+    "nexus": "^0.12.0-beta.12",
+    "nexus-prisma": "^0.5.0"
   },
   "scripts": {
     "start": "nodemon src/index.js",
@@ -16,7 +17,7 @@
     "postinstall": "prisma2 generate"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3",
-    "prisma2": "2.0.0-preview-13.2"
+    "nodemon": "^1.19.4",
+    "prisma2": "2.0.0-preview014.2"
   }
 }
